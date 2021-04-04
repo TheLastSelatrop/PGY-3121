@@ -13,27 +13,35 @@ Miembros del equipo:
 # Lineas de comando para linkear por primera vez el repositorio a VScode
 
 > echo "# PGY-3121" >> README.md
+> 
 > git init
+> 
 > git add README.md
+> 
 > git commit -m "first commit"
+> 
 > git branch -M main
+> 
 > git remote add origin https://github.com/OmniSlash-5/PGY-3121.git
+> 
 > git push -u origin main
 
 # Lineas de comando para sobre-escribir el repositorio Github a VSCode
 
 > git remote add origin https://github.com/OmniSlash-5/PGY-3121.git
+> 
 > git branch -M main
+> 
 > git push -u origin main
 
 # Lineas de comando para sobre-escribir el repositorio VSCode a Github
 
 > git init
-
+> 
 > git add NOMBRE-ARCHIVO.EXTENCION (Ejemplo: Pagina1.html)
-
-> git commit -m "commit de (primer nombre) | Tipo: (Backup/Update/Correccion) "
-
+> 
+> git commit -m "commit de (primer nombre) | Tipo: (Backup/Update/Correccion)"
+> 
 > git branch -M main
-
+> 
 > git push -u origin main
