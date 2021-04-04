@@ -29,7 +29,11 @@ Miembros del equipo:
 # Lineas de comando para sobre-escribir el repositorio VSCode a Github
 
 > git init
+
 > git add NOMBRE-ARCHIVO.EXTENCION (Ejemplo: Pagina1.html)
+
 > git commit -m "commit de (primer nombre) | Tipo: (Backup/Update/Correccion) "
+
 > git branch -M main
+
 > git push -u origin main
