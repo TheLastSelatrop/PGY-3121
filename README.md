@@ -45,3 +45,24 @@ Miembros del equipo:
 > git branch -M main
 > 
 > git push -u origin main
+
+
+push
+15:22
+
+pull
+15:22
+
+push
+15:22
+
+empuja
+15:22
+
+a la nube
+15:22
+
+pull baja, tira 
+15:22
+lo de la nube
+
