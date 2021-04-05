@@ -46,23 +46,6 @@ Miembros del equipo:
 > 
 > git push -u origin main
 
+uwu
 
-push
-15:22
-
-pull
-15:22
-
-push
-15:22
-
-empuja
-15:22
-
-a la nube
-15:22
-
-pull baja, tira 
-15:22
-lo de la nube
 
