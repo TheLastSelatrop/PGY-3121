@@ -46,6 +46,4 @@ Miembros del equipo:
 > 
 > git push -u origin main
 
-uwu
-
-
+OwO
