@@ -7,10 +7,14 @@
 }
 .bg-light {
 <<<<<<< HEAD
+<<<<<<< HEAD
     background-color:rgb(66, 154, 130)!important;
 =======
     background-color:#fff4c2!important;
 >>>>>>> parent of 8799157 (GAY-001D)
+=======
+    background-color:#fff4c2!important;
+>>>>>>> 3554f6f (Organizado de archivos css)
 }
 .navbar-light .navbar-nav .nav-link {
     color:rgb(75, 75, 75);   
@@ -33,11 +37,19 @@
     
 }
 .redes .circulo {
+<<<<<<< HEAD
     background-color: #ffffff;
     color: #646464;
     display: inline-block;
     border-radius: 2em;
     border-color: #ffffff;
+=======
+    background-color: #fff5f5;
+    color: #ffe46c;
+    display: inline-block;
+    border-radius: 2em;
+    border-color: #ffe46c;
+>>>>>>> 3554f6f (Organizado de archivos css)
     width: 2em;
     height: 2em;
     font-size: 1.2em;
@@ -71,7 +83,11 @@
 
 .saludo2{
     text-align: left;
+<<<<<<< HEAD
     background-color: #fff4c2 ;
+=======
+    background-color: white ;
+>>>>>>> 3554f6f (Organizado de archivos css)
     font-family: 'Meddon', "i";
     font-style: italic;
 }
@@ -138,6 +154,7 @@
 .tituloshingeki{
     font-family: 'Meddon';
     font-style: italic;
+<<<<<<< HEAD
 }
 
 .alertB{
@@ -147,3 +164,6 @@
     width: 360px;
     height: auto;
   }
+=======
+}
+>>>>>>> 3554f6f (Organizado de archivos css)
