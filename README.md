@@ -10,6 +10,13 @@ Miembros del equipo:
 - Camila Peña
 - Agustín Figueroa
 
+# Tags de archivos
+ 
+> ST = Sin Terminar / sin hacer
+> CF = Con Fallas
+> EC = En Construccion
+> -- = Terminado
+
 # Lineas de comando para linkear por primera vez el repositorio a VScode
 
 > echo "# PGY-3121" >> README.md

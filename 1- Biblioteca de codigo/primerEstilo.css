@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+body {
+    background-color: powderblue;
+    background-image: url('img/bg.jpg');
+    /* https://previews.123rf.com/images/imagemir/imagemir1801/imagemir180100067/94570438-geometric-abstract-background-geometric-pattern-shapes-geometric-background-web-design-you-can-find-.jpg */
+    background-size: 300px;
+    background-repeat: repeat-y;
+    background-position: center;
+}
+    
+h1 {
+    color: rgb(255,55,99);
+    font-family: 'Shadows Into Light', cursive;
+    font-style: italic;
+    font-size: 60px;
+    font-weight: lighter;
+    text-decoration: underline;
+    text-decoration-color: bisque;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: brown 3px 3px;
+}
+
+p {
+    /* border-color: #FF33FF; */
+    text-align: justify;
+    color: darkblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+img {
+    float: right;
+    margin: 10px 20px;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.redondear {
+    border-radius: 30px;
+}

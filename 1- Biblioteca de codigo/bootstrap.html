@@ -1,0 +1,156 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Bootstrap</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        div.col-sm {
+            background-color: cornflowerblue;
+            border: 1px solid #000;
+        }
+
+        div.col {
+            background-color: rgb(100, 237, 123);
+            border: 1px solid #000;
+        }
+        #b-lila div {
+            background-color: blueviolet;
+            border: 1px solid #000;
+        }
+        #b-rojo div {
+            background-color: rgb(241, 61, 15);
+            border: 1px solid #000;
+        }
+
+        #b-amarillo div {
+            background-color: rgb(237, 241, 15);
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación completísima de ejemplo-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    <div class="container">
+        <button type="button" class="btn btn-primary">Boton en bloque</button>
+
+        <div class="row">
+            <div class="col">1 de 3</div>
+            <div class="col">2 de 3</div>
+            <div class="col">3 de 3</div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                1 of three columns asdasdasd asdasd asd asdasdasd asd as das das dasdasdasdasd
+            </div>
+            <div class="col-sm">
+                2 of three columns
+            </div>
+            <div class="col-sm">
+                3 of three columns
+            </div>
+            <div class="col-sm">
+                test
+            </div>
+        </div>
+
+        <div class="row" id="b-lila">
+            <div class="col-6">uno grande</div>
+            <div class="col-2">chico</div>
+            <div class="col-4">medio</div>
+        </div>
+
+        <div class="row" id="b-rojo">
+            <div class="col-sm-6">uno grande</div>
+            <div class="col-sm-2">chico</div>
+            <div class="col-sm-4">medio</div>
+        </div>
+
+        <div class="row" id="b-amarillo">
+            <div class="col-6 col-md-4">6 y 4</div>
+        </div>
+
+        <div class="row">
+            <h1>Esto es un título</h1>
+        </div>
+        <div class="row">
+            <ul>
+                <li>Calabaza</li>
+                <li>Manzana</li>
+                <li>Mermelada</li>
+                <li>Termo con cafe</li>
+            </ul>
+        </div>
+        <div class="row">
+            <img src="https://estaticos-cdn.elperiodico.com/clip/6e0e1d5f-8851-4677-b616-4cca88f99ff5_alta-libre-aspect-ratio_default_0.jpg"
+            alt="El mandaloriano"
+            class="img-fluid rounded" />
+        </div>
+        <div class="row">
+            <img src="https://i.pinimg.com/originals/12/01/cd/1201cd4a8705c8850831a97bc9d8e4dd.png"
+            alt="Mandaloriano chiquito"
+            class="rounded float-right" />
+            <p>asdasd asda sd asd asd asds</p>
+        </div>
+    </div>
+
+    <div class="alert alert-warning" role="alert">
+        A simple warning alert—check it out!
+    </div>
+    
+    <a class="btn btn-outline-danger btn-block btn-sm" disabled>Danger</a>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+    </nav>
+
+    
+      
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+</body>
+</html>
+
