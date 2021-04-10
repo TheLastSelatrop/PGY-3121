@@ -16,7 +16,7 @@
     text-align:right;
 }
 
-/Parte de la redes sociales/
+/*Parte de la redes sociales*/
 .redes {
     background-color: #ffffff;
     text-align: right;
@@ -57,7 +57,7 @@
     border-top: 2px solid #BBB;
 }
 
-/Parte de quienes somos/
+/*Parte de quienes somos*/
 .saludo {
     text-align: right;
     background-color: #fff4c2 ;
@@ -75,17 +75,17 @@
     float: right;
 }
 
-/Galeria/
+/*Galeria*/
 .galeria {
     background-color: #fff4c2;
     padding: 2em;
 }
 
-/Formulario de contacto/
+/*Formulario de contacto*/
 .contacto {
     padding: 2em;
 }
-/boton de formulario de contacto/
+/*boton de formulario de contacto*/
 .btn-success{
     background-color: #fff1b4;
     border-color: white;
@@ -106,13 +106,13 @@
     color: #6ccba9;
 }
 
-/Imagen de spiler/
+/*Imagen de spiler*/
 .danger{
 
     text-align:center;
 }
 
-/Parrafo del la pagina de detalleshingeki/
+/*Parrafo del la pagina de detalleshingeki*/
 .parrafo1{
     margin: 15mm;
     text-align: center;
