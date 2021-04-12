@@ -29,11 +29,11 @@
     
 }
 .redes .circulo {
-    background-color: #fff5f5;
-    color: #ffe46c;
+    background-color: #ffffff;
+    color: #646464;
     display: inline-block;
     border-radius: 2em;
-    border-color: #ffe46c;
+    border-color: #ffffff;
     width: 2em;
     height: 2em;
     font-size: 1.2em;
@@ -67,7 +67,7 @@
 
 .saludo2{
     text-align: left;
-    background-color: white ;
+    background-color: #fff4c2 ;
     font-family: 'Meddon', "i";
     font-style: italic;
 }
