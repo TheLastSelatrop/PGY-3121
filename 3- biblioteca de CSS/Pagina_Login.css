@@ -32,7 +32,7 @@ div.col {
     display: flex;
     justify-content: flex-end;
     margin: 10px 10px 0 0;
-    font-size: 12px;
+    font-size: 18px;
     border-radius: 30px
     
 }
@@ -62,4 +62,32 @@ div.col {
     transition-property: opacity;
     transition-duration: 1s;
     transition-timing-function: ease;
+}
+.Gen0{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: 116px;
+    height: 36x;
+    font-size: 15px
+}
+.Gen1{
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 116px;
+    height: 36px;
+    font-size: 15px
+}
+.Gen2{
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 130px;
+    height: 50px;
+    font-size: 18px
+}
+.Gen3{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: 130px;
+    height: 50px;
+    font-size: 18px
 }
