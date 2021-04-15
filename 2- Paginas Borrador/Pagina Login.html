@@ -7,7 +7,75 @@
     <title>OmniSlashLabs Login</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="../3- biblioteca de CSS/Pagina_Login.css"><link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/Pagina_Login.css"><link rel="stylesheet" href="">
+    <style>
+        body{
+            background-color:#f4f4f4;
+            font-family: HiraginoSans-W3,Hiragino Kaku Gothic Pro,メイリオ,Meiryo,Verdana,sans-serif;
+        }
+        div.col-sm {
+            background-color: cornflowerblue;
+            border: 1px solid #000;
+        }
+
+        div.col {
+            background-color: rgb(100, 237, 123);
+            border: 1px solid #000;
+        }
+        #b-lila div {
+            background-color: blueviolet;
+            border: 1px solid #000;
+        }
+        #b-rojo div {
+            background-color: rgb(241, 61, 15);
+            border: 1px solid #000;
+        }
+
+        #b-amarillo div {
+            background-color: rgb(237, 241, 15);
+            border: 1px solid #000;
+        }
+        #b-back div {
+            background-color: #f4f4f4;            
+            border: 1px solid #f4f4f4;
+        }
+        .toggle-button-box {
+            display: flex;
+            justify-content: flex-end;
+            margin: 10px 10px 0 0;
+            font-size: 12px;
+            border-radius: 30px
+            
+        }
+        .login-form {
+            margin: 20vh auto 0;
+            text-align: center;
+            background-color: hsla(0,0%,100%,.65);
+            height: 480px;
+            width: 400px;
+            padding: 40px 0 38px;
+            border-radius: 4px;
+        }
+        .carrusel {
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            position: fixed;
+        }
+        .wallpaper {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position-x: 50%;
+            background-position-y: 0;
+            opacity: 1;
+            transition-property: opacity;
+            transition-duration: 1s;
+            transition-timing-function: ease;
+        }
+    </style>    
 </head>
 
 <body>
@@ -48,22 +116,20 @@
     <div class="login-form card" style="width: 18rem;">
         <img class="card-img-top" src="../img/Imagen2.png" alt="">
         <div class="card-body">
-            <form>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label"></label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo Electronico">
-                    <div id="emailHelp" class="form-text">No comprartas tu email con nadie.</div>
+            <form id="form1" class="form-signin">
+                <h1 class="h3 mb-3 font-weight-normal text-center">Login</h1>
+                <label for="" class="sr-only">Usuario</label>
+                <input id="user" type="text" class="form-control" placeholder="Usuario" autofocus>
+                <label for="" class="sr-only">Password</label>
+                <input id="pass"  type="password" class="form-control" placeholder="Password">
+                <div class="checkbox mb-3">
+                 
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label"></label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Mantener sesion abierta</label>
-                </div>
-                <button type="submit" class="toggle-button-box btn btn-primary">Login</button>
-                </form>
+                <button id="btnLogin" class="btn btn-lg btn-primary btn-block" type="submit">Conectar</button>
+              
+              <div id="alertSI" class="alert alert-success alert-dismissible fade show" role="alert">Login ¡OK!</div>
+              <div id="alertNO" class="alert alert-danger" role="alert">Complete los datos</div>
+              </form>
         </div>
     </div>
 
@@ -71,5 +137,30 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+    <script>
+
+
+
+$(document).ready(function() {        
+    $("#alertSI").hide();
+    $("#alertNO").hide();
+    $("#form1").submit(function(e){
+        e.preventDefault();    
+        user = $.trim($("#user").val());
+        pass = $.trim($("#pass").val());
+        if(user.length>0 && pass.length>0){           
+            $("#alertSI").fadeTo(2000, 500).slideUp(500, function() {
+                $("#alertSI").slideUp(500);
+            });        
+        }else{
+            $("#alertNO").fadeTo(2000, 500).slideUp(500, function() {
+                $("#alertNO").slideUp(500);
+            });
+        }
+        });   
+});
+     </script>  
+
 </body>
 </html>
