@@ -1,0 +1,73 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="signin.css">  
+    <title>Hello, world!</title>
+      
+  </head>
+  <body>
+
+
+<div class="container-fluid">
+    
+    
+<form id="form1" class="form-signin">
+  <img class="mb-4" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal text-center">Login</h1>
+  <label for="" class="sr-only">Usuario</label>
+  <input id="user" type="text" class="form-control" placeholder="Usuario" autofocus>
+  <label for="" class="sr-only">Password</label>
+  <input id="pass"  type="password" class="form-control" placeholder="Password">
+  <div class="checkbox mb-3">
+   
+  </div>
+  <button id="btnLogin" class="btn btn-lg btn-primary btn-block" type="submit">Conectar</button>
+
+<div id="alertSI" class="alert alert-success alert-dismissible fade show" role="alert">Login ¡OK!</div>
+<div id="alertNO" class="alert alert-danger" role="alert">Complete los datos</div>
+</form>
+    
+</div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      
+
+    <script>
+   
+  
+
+ $(document).ready(function() {        
+     $("#alertSI").hide();
+     $("#alertNO").hide();
+    $("#form1").submit(function(e){
+        e.preventDefault();    
+        user = $.trim($("#user").val());
+        pass = $.trim($("#pass").val());
+        if(user.length>0 && pass.length>0){           
+            $("#alertSI").fadeTo(2000, 500).slideUp(500, function() {
+              $("#alertSI").slideUp(500);
+            });        
+        }else{
+            $("#alertNO").fadeTo(2000, 500).slideUp(500, function() {
+              $("#alertNO").slideUp(500);
+            });
+        }
+        });   
+});
+     </script>  
+      
+  </body>
+</html>
+
