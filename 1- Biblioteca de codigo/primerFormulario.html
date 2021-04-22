@@ -1,0 +1,73 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer formulario</title>
+</head>
+<body>
+    <h2>Mi primer Formulario</h2>
+
+    <form method="GET" name="primero">
+        <p>
+            <!-- Controles input -->
+            <input type="text" 
+                name="rut" id="rut" 
+                placeholder="xxxxxxxx-x" 
+                value="34234234-3"
+                readonly
+            /> <br />
+
+            <!-- Controles input especiales -->
+            
+            <input type="password" name="pass" id="pass" /> <br />
+            <input type="number" name="un_numero" id="un_numero" /><br />
+            <input type="date" name="una_fecha" id="una_fecha" /><br />
+            <label for="email">Indica email</label>
+            <input type="email" name="email" id="email" /><br />
+
+            <!-- Controles input botones -->
+        <input type="submit" value="Mándalo" />
+        <input type="reset" value="borrar formulario"/><br />
+
+        </p>
+    
+        <fieldset>
+            <legend>Mi primer grupillo para formulario</legend>
+            <!-- Controles seleccion -->
+            <p>
+                <label for="alimento">Selecciona una opción</label><br />
+                <select name="alimento" id="alimento" size="3" multiple>
+                    <optgroup label="Primeros">
+                        <option value="1">Pan</option>
+                        <option value="2">Cebolla</option>
+                        <option value="3">Sandía</option>
+                        <option>Mani</option>
+                    </optgroup>
+
+                    <optgroup label="Otros">
+                        <option>Uno</option>
+                        <option>Dos</option>
+                    </optgroup>
+                </select>
+            </p>
+            
+            <p>
+                <textarea cols="20" rows="10" name="ejtext" id="ejtext"></textarea>
+            </p>
+
+            <p>
+                <button type="button">Cosas extra</button>
+            </p>
+        </fieldset>
+
+    </form>
+
+    
+    
+</body>
+</html>
+
