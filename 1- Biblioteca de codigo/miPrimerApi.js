@@ -58,7 +58,7 @@ $(document).ready(function(){
     $('#traer-pk').click(function(){
         //Pokemon 1er llamado a la lista
         $.get({
-            url: 'https://pokeapi.co/api/v2/pokemon?limit=1&offset=806"',
+            url: 'https://pokeapi.co/api/v2/pokemon?limit=20&offset=10',
             success: function(listaPK) {
  
              var tarjetas = $('#tarjetas')
