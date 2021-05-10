@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="texto">Texto libre</label>
+                <input type="text" class="form-control" id="texto" name="texto" >
+            </div>
+
+            <div class="form-group">
+                <label for="num1">Número 1</label>
+                <input type="number" class="form-control" id="num1" name="num1" >
+            </div>
+            <div class="form-group">
+                <label for="num2">Número 2</label>
+                <input type="number" class="form-control" id="num2" name="num2">
+            </div>
+            <button type="button" class="btn btn-primary" id="sumar">Sumar</button>
+            <button type="submit" class="btn btn-secondary" id="enviar">Enviar</button>
+        </form>
+    </div>
+    
+    <div class="container">
+        <h1>Ejemplo práctico de validación</h1>
+        <form class="ej">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" >
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo electronico: </label>
+                <input type="email" class="form-control" id="email" name="email" >
+            </div>
+            <button type="submit" class="btn btn-danger" id="enviar">Enviar</button>
+            <button type="reset" class="btn btn-primary" id="limpiar">Limpiar</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#num2").blur(function() {
+                console.log("Blur adios")
+            });
+
+            $("#num1").change(function() {
+                console.log("Change " + $(this).val())
+            });
+            // Dato extra
+            $("#num1").keyup(function() {
+                console.log("valor " + $(this).val())
+            });
+
+            $("#num1").focus(function() {
+                console.log("Focus")
+            });
+
+            $("#texto").select(function() {
+                console.log("Seleccionando")
+            });
+
+            $('#limpiar').click(function(){
+                alert("Hazlo o déjalo, intentos no quiero, deberías hacerlo de una");
+            })
+
+            $('form.ej').submit(function() {
+                event.preventDefault()
+                var nombre = $('#nombre').val()
+                if (nombre == "") {
+                    alert("Debes poner nombre")
+                } else {
+                    console.log("Nombre tiene valor")
+                }
+
+                console.error("no estoy enviando el formulario")
+            });
+
+
+
+
+            $("#sumar").click(function() {
+                var n1 = parseInt( $("#num1").val() );
+                var n2 = parseInt( $("#num2").val() );
+
+                var resultado = n1 + n2;
+
+                alert("El resultado es: " + resultado);
+                
+            });
+        });
+    </script>
+
+</body>
+</html>
+
