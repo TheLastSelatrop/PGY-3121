@@ -62,6 +62,7 @@ $(document).ready(function(){
             }
         })
      })
+     
     //geolocalizacion
      var options = {
         enableHighAccuracy: true,
@@ -83,5 +84,4 @@ $(document).ready(function(){
       };
       
       navigator.geolocation.getCurrentPosition(success, error, options);
-})
 })
