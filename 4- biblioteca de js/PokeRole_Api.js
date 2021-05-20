@@ -1,9 +1,12 @@
 $(document).ready(function(){
 
+
+
+
     $('#traer-pk').click(function(){
         //Pokemon 1er llamado a la lista
         $.get({
-            url: 'https://pokeapi.co/api/v2/pokemon?limit=1&offset=806',
+            url: 'https://pokeapi.co/api/v2/pokemon?limit=12&offset='+ ((document.getElementById('demo').innerHTML)-1), // 795'
             success: function(listaPK) {
  
              var tarjetas = $('#tarjetas')
@@ -15,20 +18,23 @@ $(document).ready(function(){
              $.each(listaPK.results, function(indice, elemento){
                 $.get({
                     url: elemento.url,
-                    success: function(detalle) {
+                    success: function(detalle) {                       
                         console.log(detalle)
                         tarjetas.append("<div class='card'>"+
                          "<img src='" + detalle.sprites.front_default + "' class='card-img-top' alt='" + elemento.name + "'>"+
                          "<div class='card-body'>"+
                              "<h5 class='card-title'>" + detalle.name + "</h5>"+
                              "<span class='card-text'>" + detalle.id + "</span> <br>"+
-                             "<span class='card-text'>" + detalle.stats.0.base_stat + "</span> <br>"+
-                             "<span class='card-text'>" + "DF: EXAMPLE BOTTOM TEXT" + "</span> <br>"+
-                             "<span class='card-text'>" + "SP: EXAMPLE BOTTOM TEXT" + "</span> <br>"+
+                             "<p class='card-text' id='stat"+detalle.id+"'>" + "</p>"+
                          "</div>"+
                         "</div>");
+                        $.each(detalle.stats, function(i, stat){
+                            console.log(stat)
+                            $('#stat'+detalle.id).append("<span>" + stat.stat.name + " " + stat.base_stat + "</span> <br>")
+                        })
 
                     },
+                    
                     error: function(error) {
                         console.error(error);
                     }

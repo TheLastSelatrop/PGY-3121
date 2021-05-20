@@ -12,27 +12,49 @@
 <body>
 
     <button type="button" class="btn btn-warning" id="traer-pk">Pokemon</button>
+    <button onclick="document.getElementById('demo').innerHTML = getRndInteger(1,898)">Click Me</button>
+
+    <p id="demo"></p>
+
 
 
       <div class="card-columns" id="tarjetas">
         <div class="card">
             <img src="https://media.discordapp.net/attachments/790055388107112459/799048861954998293/TheBongoZeraora.gif" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <span class="card-text" id="HP">HP: </span> <br>
-              <span class="card-text" id="Attack">AT: </span> <br>
-              <span class="card-text" id="Defense">DF: </span> <br>
-              <span class="card-text" id="Speed">SP: </span> <br>
+              <h5 class="card-title">Trials Lost</h5>
+              <p class="card-text"> ¬ Raza: Zeraora</p>
+              <span class="card-text"> ¬ HP: 338</span> <br>
+              <span class="card-text"> ¬ Atk: 252</span> <br>
+              <span class="card-text"> ¬ Def: 227</span> <br>
+              <span class="card-text"> ¬ Spe: 343</span> <br>
+              <span class="card-text"> ¬ SpA: 261</span> <br>
+              <span class="card-text"> ¬ SpD: 217</span> <br>
               <p class="card-text"><small class="text-muted">Last updated 3 mins ago.... Respeta las reglas del Chat BOTTOM TEXT</small></p>
             </div>
           </div>
       </div>
+
+      <div class="Leon card" style="width: 18rem;">
+        <img src="https://media.discordapp.net/attachments/790055388107112459/799048861954998293/TheBongoZeraora.gif" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Zeraora</h5>
+          <p class="card-text">Soy un gato y me gusta el atun! Meow! ^ᴥ^</p>
+          <a href="Pagina Principal.html" class="btn btn-primary">Darle un atun y Huir...</a>
+        </div>
+    </div>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
     <script src="4- biblioteca de js/PokeRole_Api.js"></script>
+    <script>
+      function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) ) + min;
+      }
+      </script>
 </body>
 </html>
 
