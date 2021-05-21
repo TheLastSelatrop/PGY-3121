@@ -17,6 +17,7 @@
     <!-- CSS propio -->
     <link rel="stylesheet" href="3- biblioteca de CSS/Pagina_Inicio.css">
   </head>
+  
   <style>
       .Leon {
             margin: 20vh auto 0;
@@ -26,7 +27,12 @@
             padding: 40px 0 38px;
             border-radius: 4px;
         }
+
+      #map{
+        margin: 20px;
+      }
   </style>
+
   <body>
 
     <!--Logo + redes sociales--> 
@@ -101,10 +107,65 @@
         </div>
     </div>
 
+
+
+    <iframe
+      width="600"
+      height="450"
+      frameborder="0"
+      style="border:0"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCYp_1LIER4WIC40EaB4dyVgiOvJk3NcWk&q=Space+Needle,Seattle+WA" allowfullscreen>
+    </iframe> 
+
 <!--<audio controls loop autoplay>
       <source src="2- Paginas Borrador/Leon el Zeraora.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
     </audio> -->
+
+
+
+<!--Mapa-->
+
+<button onclick="findMe()">Mostrar ubicación</button>
+<div id="map"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYp_1LIER4WIC40EaB4dyVgiOvJk3NcWk=%22%3E"></script>
+<script>
+  function findMe(){
+    var output = document.getElementById('map');
+
+    // Verificar si soporta geolocalizacion
+    if (navigator.geolocation) {
+      output.innerHTML = "<p>Tu navegador soporta Geolocalizacion</p>";
+    }else{
+      output.innerHTML = "<p>Tu navegador no soporta Geolocalizacion</p>";
+    }
+
+    //Obtenemos latitud y longitud
+    function localizacion(posicion){
+
+      var latitude = posicion.coords.latitude;
+      var longitude = posicion.coords.longitude;
+
+      var imgURL = "https://maps.googleapis.com/maps/api/staticmap?center="+latitude+","+longitude+"&size=600x300&markers=color:red%7C"+latitude+","+longitude+"&key=AIzaSyCYp_1LIER4WIC40EaB4dyVgiOvJk3NcWk";
+
+      output.innerHTML ="<img src='"+imgURL+"'>";
+
+
+
+    }
+
+    function error(){
+      output.innerHTML = "<p>No se pudo obtener tu ubicación</p>";
+
+    }
+
+    navigator.geolocation.getCurrentPosition(localizacion,error);
+
+  }
+
+
+</script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
