@@ -20,7 +20,7 @@ $(document).ready(function(){
                     url: elemento.url,
                     success: function(detalle) {                       
                         console.log(detalle)
-                        tarjetas.append("<div class='card'>"+
+                        tarjetas.append("<div class='card Gen0-30-1' style='width: 18rem;'>"+
                          "<img src='" + detalle.sprites.front_default + "' class='card-img-top' alt='" + elemento.name + "'>"+
                          "<div class='card-body'>"+
                              "<h5 class='card-title'>" + detalle.name + "</h5>"+
