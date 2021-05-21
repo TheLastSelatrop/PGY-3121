@@ -36,7 +36,7 @@ $(document).ready(function(){
     $('#traer-saint').click(function(){
         //saint seiya
         $.get({
-            url: 'ttps://saint-seiya-api.herokuapp.com/api/characters',
+            url: 'https://saint-seiya-api.herokuapp.com/api/characters',
             success: function(listaSW) {
  
              var tarjetas = $('#tarjetas')
@@ -62,26 +62,57 @@ $(document).ready(function(){
             }
         })
      })
+
+     $('#traer-snk_titanes').click(function(){
+        //Shingeki
+        $.get({
+            url: 'https://my-json-server.typicode.com/FrapoDeveloper/titans-db/Titanes',
+            success: function(listaSW) {
+ 
+             var tarjetas = $('#tarjetas')
+             tarjetas.empty();
+ 
+             console.log(listaSW)
+ 
+             $.each(listaSW, function(indice, elemento){
+                 tarjetas.append("<div class='card'>"+
+                         "<img src='" + elemento.img + "' class='card-img-top' alt='" + elemento.name + "'>"+
+                         "<div class='card-body'>"+
+                             "<h5 class='card-title'>" + elemento.name + "</h5>"+
+                             "<p class='card-text'><b>Altura:</b> " + elemento.altura + "</p>"+
+                             "<p class='card-text'><b>Definición:</b> " + elemento.definition + "</p>"+
+                             "<p class='card-text'><b>Poder:</b> " + elemento.poder + "</p>"+
+                             "<p class='card-text'><b>Descripción:</b> " + elemento.description + "</p>"+
+                         "</div>"+
+                     "</div>");
+             });
+ 
+            },
+            error: function(error) {
+                console.error(error);
+            }
+        })
+     })
      
     //geolocalizacion
-     var options = {
+    var options = {
         enableHighAccuracy: true,
         timeout: 5000,
         maximumAge: 0
-      };
+    };
       
-      function success(pos) {
+    function success(pos) {
         var crd = pos.coords;
       
         console.log('Your current position is:');
         console.log('Latitude : ' + crd.latitude);
         console.log('Longitude: ' + crd.longitude);
         console.log('More or less ' + crd.accuracy + ' meters.');
-      };
+    };
       
-      function error(err) {
+    function error(err) {
         console.warn('ERROR(' + err.code + '): ' + err.message);
-      };
-      
-      navigator.geolocation.getCurrentPosition(success, error, options);
+    };
+    
+    navigator.geolocation.getCurrentPosition(success, error, options);
 })
