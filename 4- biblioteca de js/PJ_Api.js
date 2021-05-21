@@ -36,7 +36,7 @@ $(document).ready(function(){
     $('#traer-saint').click(function(){
         //saint seiya
         $.get({
-            url: 'https://saint-seiya-api.herokuapp.com/api/characters',
+            url: 'ttps://saint-seiya-api.herokuapp.com/api/characters',
             success: function(listaSW) {
  
              var tarjetas = $('#tarjetas')
