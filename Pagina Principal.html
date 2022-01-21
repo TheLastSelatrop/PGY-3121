@@ -6,55 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Dos alamos</title>
 
-    <!--Mapa-->
-
-    <style>
-      #map{
-        margin: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <button onclick="findMe()">Mostrar ubicación</button>
-    <div id="map"></div>
-
-    <script> src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYp_1LIER4WIC40EaB4dyVgiOvJk3NcWk=%22%3E"</script>
-    <script>
-      function findMe(){
-        var output = document.getElementById('map');
-
-        // Verificar si soporta geolocalizacion
-        if (navigator.geolocation) {
-          output.innerHTML = "<p>Tu navegador soporta Geolocalizacion</p>";
-        }else{
-          output.innerHTML = "<p>Tu navegador no soporta Geolocalizacion</p>";
-        }
-
-        //Obtenemos latitud y longitud
-        function localizacion(posicion){
-
-          var latitude = posicion.coords.latitude;
-          var longitude = posicion.coords.longitude;
-
-          var imgURL = "https://maps.googleapis.com/maps/api/staticmap?center=%22+latitude+%22,%22+longitude+%22&size=600x300&markers=color:red%7C%22+latitude+%22,%22+longitude+%22&key=AIzaSyCYp_1LIER4WIC40EaB4dyVgiOvJk3NcWk";
-
-          output.innerHTML ="<img src='"+imgURL+"'>";
-
-
-
-        }
-
-        function error(){
-          output.innerHTML = "<p>No se pudo obtener tu ubicación</p>";
-
-        }
-
-        navigator.geolocation.getCurrentPosition(localizacion,error);
-
-      }
-
-
-    </script>
+    
   </body>
   </html>
 
@@ -104,11 +56,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <div class="btn-group dropdown-item" role="group" aria-label="Basic mixed styles example">
                         <a class="dropdown-item" href="https://dosalamos.ml/agenda/index.php/user/login">
-                          <button type="button" class="btn btn-light dropdown-item">Login</button>
-                        </a>
-                        <a class="dropdown-item" href="Pagina Registro.html">
-                          <button type="button" class="btn btn-light dropdown-item">Registro</button>
-                        </a>                    
+                          <button type="button" class="btn btn-light dropdown-item">Login</button>                   
                       </div>
                     </div>
                   </li>
