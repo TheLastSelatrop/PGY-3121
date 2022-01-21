@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="3- biblioteca de CSS/api.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<style>
+    body{
+      background-color: white;
+    }
+  </style>
+<body>
+    <!--Logo + redes sociales--> 
+    <div class="container-sm" >
+      <div class="row">
+        <div class="col-12 redes">
+          <div class="col-1 image"><img src="img/Imagen2.png" alt="" height="80" width="auto"></div>
+          <a href="https://www.instagram.com/naruto/"><div class="col-1 circulo"><i class="fab fa-instagram"></i></div></a>
+          <a href="https://www.instagram.com/naruto/"><div class="col-1 circulo"><i class="fab fa-facebook-f"></i></div></a>
+          <a href="https://www.instagram.com/naruto/"><div class="col-1 circulo"><i class="fab fa-google-plus-g "></i></div></a>
+          <a href="https://www.instagram.com/naruto/"><div class="col-1 circulo"><i class="far fa-envelope"></i></div></a>
+        </div>
+    </div>
+    </div>
+    <!--navegacion-->
+    <div class="container-sm">
+        <div class="row">
+          <div class=" navegacion col-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                    <a class="nav-link" href="Pagina Principal.html">Inicio</a>
+                    <a class="nav-link" href="Formulario Contacto.html">Formulario de contacto</a>
+                    <a class="nav-link" href="PersonajesApi.html" >Personajes </a>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Cuenta
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="btn-group dropdown-item" role="group" aria-label="Basic mixed styles example">
+                          <a class="dropdown-item" href="Pagina Login.html">
+                            <button type="button" class="btn btn-light dropdown-item">Login</button>
+                          </a>
+                          <a class="dropdown-item" href="Pagina Registro.html">
+                            <button type="button" class="btn btn-light dropdown-item">Registro</button>
+                          </a>                    
+                        </div>
+                      </div>
+                    </li>
+                    <form class="form-inline mx-5 my-2 my-lg-0 ">
+                      <input class="form-control mx-6 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success btn-light text-dark my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+            </nav>
+          </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-sm">
+        <h1>Personajes</h1>
+        <br>
+        <button type="button" class="btn btn-dark" id="traer-snk">Shingeki no Kyojin</button>
+        <button type="button" class="btn btn-dark" id="traer-snk_titanes">Shingeki no Kyojin (titanes)</button>
+        <button type="button" class="btn btn-dark" id="traer-saint">Saint Seiya</button>
+    </div>
+
+    <br>    
+    <div class="container">
+      <div class="card-columns" align="center" id="tarjetas">
+        <div class="card">
+            <p class="card-text">Seleccione algun anime.</p>
+            <img src="img/esperar.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+              <p class="card-text"></p>
+              <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+          </div>
+      </div>
+    </div>
+      
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="4- biblioteca de js/PJ_Api.js"></script>
+</body>
+</html>
