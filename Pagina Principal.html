@@ -6,7 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Omnislash Anime</title>
 
-    
+    <!--Mapa-->
+
+    <style>
+      #map{
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="findMe()">Mostrar ubicación</button>
+    <div id="map"></div>
+
+    <script> src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYp_1LIER4WIC40EaB4dyVgiOvJk3NcWk=%22%3E"</script>
+    <script>
+      function findMe(){
+        var output = document.getElementById('map');
+
+        // Verificar si soporta geolocalizacion
+        if (navigator.geolocation) {
+          output.innerHTML = "<p>Tu navegador soporta Geolocalizacion</p>";
+        }else{
+          output.innerHTML = "<p>Tu navegador no soporta Geolocalizacion</p>";
+        }
+
+        //Obtenemos latitud y longitud
+        function localizacion(posicion){
+
+          var latitude = posicion.coords.latitude;
+          var longitude = posicion.coords.longitude;
+
+          var imgURL = "https://maps.googleapis.com/maps/api/staticmap?center=%22+latitude+%22,%22+longitude+%22&size=600x300&markers=color:red%7C%22+latitude+%22,%22+longitude+%22&key=AIzaSyCYp_1LIER4WIC40EaB4dyVgiOvJk3NcWk";
+
+          output.innerHTML ="<img src='"+imgURL+"'>";
+
+
+
+        }
+
+        function error(){
+          output.innerHTML = "<p>No se pudo obtener tu ubicación</p>";
+
+        }
+
+        navigator.geolocation.getCurrentPosition(localizacion,error);
+
+      }
+
+
+    </script>
   </body>
   </html>
 
@@ -28,13 +76,7 @@
     <div class="container-sm">
       <div class="row">
         <div class="col-12 redes">
-
-          <div class="col-1 image"><img src="img/Logo2.oahora si q si.png" alt="" height="80" width="auto"></div>
-
           <div class="col-1 image"><img src="img/Imagen2.png" alt="" height="80" width="auto"></div>
-
-          <div class="col-1 image"><img src="img/Imagen2.png" alt="" height="80" width="auto"></div>
-
           <a href="https://www.instagram.com/naruto/"><div class="col-1 circulo"><i class="fab fa-instagram"></i></div></a>
           <a href="https://www.instagram.com/naruto/"><div class="col-1 circulo"><i class="fab fa-facebook-f"></i></div></a>
           <a href="https://www.instagram.com/naruto/"><div class="col-1 circulo"><i class="fab fa-google-plus-g "></i></div></a>
@@ -52,12 +94,10 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                  <a class="nav-link" style="color:#ffffff"; href="Pagina Principal.html">Inicio</a>
-                  <a class="nav-link" style="color:#ffffff"; href="https://dosalamos.ml/agenda" >Reserva tu hora </a>
+                  <a class="nav-link" href="Pagina Principal.html">Inicio</a>
+                  <a class="nav-link" href="Formulario Contacto.html">Formulario de contacto</a>
+                  <a class="nav-link" href="PersonajesApi.html" >Personajes </a>
                   <li class="nav-item dropdown">
-
-                    <a class="nav-link" style="color:#ffffff"; href="https://dosalamos.ml/agenda/index.php/user/login" >Log In</a>
-
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Cuenta
                     </a>
@@ -96,24 +136,8 @@
         <div style="margin-left:125px;" id="carouselExampleFade" class="carousel slide mt-5 w-75" data-interval="2000" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-
-                <img src="img/Reserva.png.jpg" class="d-block w-100" alt="..." id="imagen" height="400" width="400">
-                <div class="carousel-caption d-none d-md-block">
-                  <h6>Reserva tu hora con nosotros </h6>
-                  <p>Ir <a href="https://dosalamos.ml/agenda">Reservar</a></p>
-                </div>
                 
-    
-              </div> <!--EN EL HREF SE DEBE CAMBIAR POR EL LINK QUE CORRESPONDE-->
-
-              <div class="carousel-item">
-    
                 
-                  <img src="img/naruto.jpg" class="d-block w-100" alt="..." id="imagen" height="400" width="400">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h6>Naruto y Kurama</h6>
-                    <p>Llega a su final <a href="DetalleNaruto.html">Ver mas...</a></p>
-
                   <img src="img/anime.jpg" class="d-block w-100" alt="..." id="imagen" height="400" width="400">
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Shingeki no Kyojin</h5>
@@ -127,29 +151,8 @@
                 
                   <img src="img/naruto.jpg" class="d-block w-100" alt="..." id="imagen" height="400" width="400">
                   <div class="carousel-caption d-none d-md-block">
-
-                    <h6>Reserva tu hora con nosotros </h6>
-                    <p>Ir <a href="https://dosalamos.ml/agenda">Reservar</a></p>
-
                     <h6>Naruto y Kurama</h6>
                     <p>Llega a su final <a href="DetalleNaruto.html">Ver mas...</a></p>
-
-                  <img src="img/anime.jpg" class="d-block w-100" alt="..." id="imagen" height="400" width="400">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>Shingeki no Kyojin</h5>
-                    <p>Llega a su final <a href="PaginaDetalleShingeki.html">Ver mas...</a></p>
-                  </div>
-                
-    
-              </div> <!--EN EL HREF SE DEBE CAMBIAR POR EL LINK QUE CORRESPONDE-->
-              <div class="carousel-item">
-    
-                
-                  <img src="img/naruto.jpg" class="d-block w-100" alt="..." id="imagen" height="400" width="400">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h6>Reserva tu hora con nosotros </h6>
-                    <p>Ir <a href="https://dosalamos.ml/agenda">Reservar</a></p>
-
                   </div>
                 
     
@@ -162,19 +165,9 @@
     
               </div>
 
+              
               <div class="carousel-item">
                 <a href="https://www.instagram.com/macmiller/">
-                  <img src="img/anime3.jpg" class="d-block w-100" alt="..." id="imagen" height="400" width="400">
-                </a>
-    
-              </div>
-
-              <div class="carousel-item">
-                <a href="https://www.instagram.com/macmiller/">
-
-              <div class="carousel-item">
-                <a href="https://www.instagram.com/macmiller/">
-
                   <img src="img//Eren2.jpg" class="d-block w-100" alt="..." id="imagen" height="400" width="400">
                 </a>
     
@@ -230,6 +223,7 @@
     
           </div>
     </div>
+
 
       <!-- Quienes somos -->
       <div class="container-sm">

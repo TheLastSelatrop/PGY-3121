@@ -6,11 +6,7 @@
     max-height: 70px;
 }
 .bg-light {
-<<<<<<< HEAD
-    background-color:rgb(66, 154, 130)!important;
-=======
     background-color:#fff4c2!important;
->>>>>>> parent of 8799157 (GAY-001D)
 }
 .navbar-light .navbar-nav .nav-link {
     color:rgb(75, 75, 75);   
